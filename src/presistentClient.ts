@@ -6,7 +6,9 @@ export function presistentClient(
   extraConfig: axios.AxiosRequestConfig<any> = {},
 ): axios.AxiosInstance {
   const jar = new CookieJar();
-  const client = wrapper(axios.default.create({ jar, ...extraConfig }));
+  const client = wrapper(
+    axios.default.create({ jar, transformResponse: (_) => _, ...extraConfig }),
+  );
 
   return client;
 }
