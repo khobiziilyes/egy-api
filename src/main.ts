@@ -108,7 +108,3 @@ function parseM3U(data) {
     ];
   }, []);
 }
-
-getDownloadLinks('/movie/the-godfather-1972/').then(links => {
-  console.log(links);
-});
