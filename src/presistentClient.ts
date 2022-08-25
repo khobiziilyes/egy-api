@@ -5,7 +5,11 @@ import { wrapper } from 'axios-cookiejar-support';
 export function presistentClient(
   extraConfig: axios.AxiosRequestConfig<any> = {}
 ): axios.AxiosInstance {
-  const jar = new CookieJar();
+  const jar = new CookieJar({
+    allowSpecialUseDomain: true,
+    rejectPublicSuffixes: false
+  });
+
   const client = wrapper(axios.default.create({ jar, ...extraConfig }));
 
   return client;
