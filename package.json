@@ -1,6 +1,6 @@
 {
   "name": "egy-apis",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "EgyBest scrapper API.",
   "type": "module",
   "main": "build/src/index.js",
@@ -42,7 +42,6 @@
   "dependencies": {
     "axios": "^0.27.2",
     "axios-cookiejar-support": "^4.0.3",
-    "dotenv": "^16.0.1",
     "tough-cookie": "^4.1.0",
     "tslib": "~2.4"
   },
