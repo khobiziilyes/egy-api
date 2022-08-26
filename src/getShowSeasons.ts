@@ -62,6 +62,10 @@ function matchShowSeasons(data) {
 export function getShowSeasons(showName) {
   return egyClient
     .get(`/series/${showName}`)
+    .then(_ => {
+      console.log(_);
+      return _;
+    })
     .then(({ data }) => matchShowSeasons(data));
 }
 
